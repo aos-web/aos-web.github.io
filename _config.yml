@@ -1,0 +1,62 @@
+# Site settings
+title: AOS WEB
+url: "https://aos-web.github.io"
+baseurl: ""
+description: Freelance Full Stack Developper
+
+# My information
+email: alain.osifre.aosweb@gmail.com
+author: Alain Osifre
+profile: PROFIL
+#twitter_username: John_Grib
+github_username: aos-web
+comment-support: utterances
+
+# Build settings
+plugins:
+  - jekyll-paginate
+  - jekyll-gist
+
+permalink: /blog/:year/:month/:day/:title/
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+paginate: 10
+paginator_path: "/blog"
+paginate_path: "/blog/page:num/"
+
+# Collections
+collections:
+    wiki:
+        output: true
+        permalink: /:collection/:path/
+
+# Comment Service
+disqus:
+  id: aos-web
+  shortname: aos-web
+utterances:
+  repo: aos-web.github.io
+  issue-term: url
+  label: Comment
+  branch: master
+
+google_analytics:
+  ua: UA-110224147-1
+
+google_adsense:
+  client: ca-pub-1909921903209443
+
+blame: "https://github.com/aos-web/aos-web.github.io/blame/master/_wiki"
+edit: "https://github.com/aos-web/aos-web.github.io/edit/master/_wiki"
+issue: "https://github.com/aos-web/aos-web.github.io/issues/new"
+
+timezone: "Asia/Seoul"
+
+# https://kramdown.gettalong.org/rdoc/Kramdown/Options.html - smart_quotes
+kramdown:
+    smart_quotes: ["apos", "apos", "quot", "quot"]
