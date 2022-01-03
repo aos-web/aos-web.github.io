@@ -46,7 +46,7 @@ utterances:
   branch: master
 
 google_analytics:
-  ua: UA-110224147-1
+  ua: G-MY4X71GLRK
 
 google_adsense:
   client: ca-pub-1909921903209443
@@ -55,7 +55,7 @@ blame: "https://github.com/aos-web/aos-web.github.io/blame/master/_wiki"
 edit: "https://github.com/aos-web/aos-web.github.io/edit/master/_wiki"
 issue: "https://github.com/aos-web/aos-web.github.io/issues/new"
 
-timezone: "Asia/Seoul"
+timezone: "Europe/Paris"
 
 # https://kramdown.gettalong.org/rdoc/Kramdown/Options.html - smart_quotes
 kramdown:
