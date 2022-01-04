@@ -29,6 +29,10 @@ paginate: 10
 paginator_path: "/blog"
 paginate_path: "/blog/page:num/"
 
+# Design
+bootstrap:
+  assets: true
+
 # Collections
 collections:
     wiki:
