@@ -4,39 +4,40 @@ adsense: false
 regenerate: true
 ---
 
+<section class="banner bg-cover" style="background-image:url(/assets/banner/banner-bg.svg)">
+    <img src="/assets/banner/illustration.svg" class="img-fluid illustration" alt="">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <h1>Développeur Full Stack en freelance. Transformer vos idées en applications.</h1>
+                <p>
+                    J'aide les entreprises à créer leurs produits numériques et à transformer leurs idées en une expérience fonctionnelle et agréable.
+                </p>
+            </div>
+            <div class="col-lg-6 illustration-mobile">
+                <img src="/assets/banner/illustration.svg" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
 <div class="blog-face">
-    <div>
-        <H3>
-            AOS WEB
-        </H3>
-    </div>
-        기억 보조용 위키
-    <div>
-    </div>
-    <div>
-        <a href="/blog/">블로그</a>
-        /
-        <a href="/tag/">태그</a>
-    </div>
     <div class="contact">
-{% if site.github_username %}
+        {% if site.github_username %}
         <a href="https://github.com/{{ site.github_username }}">GitHub</a>
-{% endif %}
-{% if site.twitter_username %}
-        <a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
-{% endif %}
-{% if site.email %}
+        {% endif %}
+        {% if site.email %}
         <a href="mailto:{{ site.email }}">Email</a>
-{% endif %}
-        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
+        {% endif %}
+        <a href="{{ " /feed.xml" | prepend: site.baseurl }}">RSS</a>
     </div>
 </div>
 <div>
     <H3 class="indent">Actualités</H3>
     <ul class="post-list">
-{% assign documents = site.wiki | sort: 'updated' | reverse %}
-{% for doc in documents limit: 30 %}
-    {% if doc.public == true and doc.title != 'wiki'%}
+        {% assign documents = site.wiki | sort: 'updated' | reverse %}
+        {% for doc in documents limit: 30 %}
+        {% if doc.public == true and doc.title != 'wiki'%}
         <li>
             <div>
                 <a class="post-link" href="{{ doc.url | prepend: site.baseurl }}">
@@ -54,8 +55,8 @@ regenerate: true
                 </a>
             </div>
         </li>
-    {% endif %}
-{% endfor %}
+        {% endif %}
+        {% endfor %}
     </ul>
     <h4>
         <a href="/recent/">Voir la liste complète des éléments ({{ site.wiki | size | minus: 1 }} éléments)</a>

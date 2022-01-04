@@ -1,16 +1,16 @@
 # Site settings
-title: AOS WEB
+title: Alain Osifre - Développeur Full Stack en freelance
 url: "https://aos-web.github.io"
 baseurl: ""
-description: Freelance Full Stack Developper
-
-# My information
+description: Développeur Full Stack en freelance
 email: alain.osifre.aosweb@gmail.com
 author: Alain Osifre
 profile: PROFIL
 #twitter_username: John_Grib
 github_username: aos-web
 comment-support: utterances
+params:
+  logo: "images/logo.svg"
 
 # Build settings
 plugins:
