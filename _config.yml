@@ -10,7 +10,7 @@ profile: PROFIL
 github_username: aos-web
 comment-support: utterances
 params:
-  logo: "images/logo.svg"
+  logo: "assets/images/logo.svg"
 
 # Build settings
 plugins:
