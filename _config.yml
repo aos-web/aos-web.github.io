@@ -8,6 +8,8 @@ author: Alain Osifre
 profile: PROFIL
 #twitter_username: John_Grib
 github_username: aos-web
+linkedin: https://www.linkedin.com/in/alain-osifre-9b120256/
+facebook: false
 comment-support: utterances
 params:
   logo: "assets/images/logo.svg"
@@ -64,3 +66,6 @@ timezone: "Europe/Paris"
 # https://kramdown.gettalong.org/rdoc/Kramdown/Options.html - smart_quotes
 kramdown:
     smart_quotes: ["apos", "apos", "quot", "quot"]
+
+sass:
+    sass_dir: _sass

@@ -1,3 +1,9 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+@import "button-copy";
 @import "https://fonts.googleapis.com/css?family=Muli:300,400,600,700&display=swap";
 body {
     line-height: 1.5;
@@ -15,6 +21,7 @@ p,
     font-family: muli, sans-serif;
 }
 a {
+    text-decoration: none;
     color: #e8505b;
 }
 a:hover {
