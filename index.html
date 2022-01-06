@@ -23,9 +23,9 @@ regenerate: true
 
 <section class="section">
     <div class="container">
-        <div class="row button-copy">
+        <div class="row">
             <div class="d-grid gap-2">
-                <button type="button" class="btn btn-outline-primary btn-lg aos-web-button-copy" autocomplete="off" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Copié" onclick="copyToClipBoard()">
+                <button type="button" class="btn btn-outline-primary btn-lg aos-web-button-copy" autocomplete="off" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Copié" id="button-email">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
                         <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
                     </svg>
@@ -38,52 +38,22 @@ regenerate: true
 
 <section class="section">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto px-0">
-                <h2>Projets professionnelles</h2>
-                <div class="bg-white shadow block">
-                    {% assign documents = site.wiki | sort: 'updated' | reverse %}
-                    {% for doc in documents limit: 30 %}
-                    {% if doc.public == true and doc.title != 'wiki'%}
-                    <article class="mb-5">
-                        <h2 class="h4">
-                            <a class="post-title" href="{{ doc.url | prepend: site.baseurl }}">{{ doc.title }}</a>
-                        </h2>
-                        <div class="mb-3 post-meta">
-                            {{ doc.updated | date: "%Y.%m.%d" }}
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+                {% for tool in site.tools %}
+                {% if tool.public == true %}
+                <div class="col">
+                    <div class="card h-100" style="width: 18rem;">
+                        <img src="{{ tool.image | prepend: site.baseurl }}" class="card-img-top" alt="Langage PHP">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ tool.title }}</h5>
+                            <p class="card-text">{{ tool.summary }}</p>
                         </div>
-                        <p>
-                            {{ doc.summary }}
-                        </p>
-                        <ul class="tag-list">
-                            <li class="post-tag">
-                                {{ doc. tag }}
-                            </li>
-                        </ul>
-                        <a href="{{ doc.url | prepend: site.baseurl }}" class="btn btn-sm btn-transparent pl-0">En savoir plus</a>
-                    </article>
-                    {% endif %}
-                    {% endfor %}
+                    </div>
                 </div>
-            </div>
+                {% endif %}
+                {% endfor %}
         </div>
     </div>
-<!-- 
-    <h4>
-        <a href="/recent/">Voir la liste complète des éléments ({{ site.wiki | size | minus: 1 }} éléments)</a>
-    </h4> -->
 </section>
-
-<!-- <div class="blog-face">
-    <div class="contact">
-        {% if site.github_username %}
-        <a href="https://github.com/{{ site.github_username }}">GitHub</a>
-        {% endif %}
-        {% if site.email %}
-        <a href="mailto:{{ site.email }}">Email</a>
-        {% endif %}
-        <a href="{{ " /feed.xml" | prepend: site.baseurl }}">RSS</a>
-    </div>
-</div> -->
 
 {% include createLink.html %}
