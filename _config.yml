@@ -45,6 +45,20 @@ collections:
       - sql.md
       - typescript.md
       - javascript.md
+      - cakephp.md
+      - silex.md
+      - codeigniter.md
+      - ionic.md
+      - angular.md
+      - symfony.md
+      - zend.md
+  competences:
+    order:
+      - application-web.md
+      - application-mobile.md
+      - integration.md
+      - javascript.md
+      - wordpress.md
 
 # Comment Service
 disqus:

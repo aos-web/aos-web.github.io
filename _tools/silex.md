@@ -4,7 +4,7 @@ title   : SILEX
 summary : Framework
 image: /assets/images/icon/silex.png
 category : framework
-level: 80
+level: 75
 public  : true
 parent  : false
 ---
