@@ -1,8 +1,8 @@
 # Site settings
-title: Alain Osifre - Développeur Full Stack en freelance
+title: Alain Osifre - Développeur web en freelance - AOSWEB
 url: "https://aos-web.github.io"
 baseurl: ""
-description: Développeur Full Stack en freelance
+description: Développeur web en freelance
 email: alain.osifre.aosweb@gmail.com
 author: Alain Osifre
 profile: PROFIL
@@ -39,6 +39,12 @@ bootstrap:
 collections:
   tools:
     output: true
+    order:
+      - css.md
+      - php.md
+      - sql.md
+      - typescript.md
+      - javascript.md
 
 # Comment Service
 disqus:
